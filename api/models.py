@@ -10,3 +10,21 @@ class DataHarian(models.Model):
 
     def __str__(self):
         return str(self.tanggal)
+
+class DataPerKecamatan(models.Model):
+    tanggal = models.DateField(blank=False, null=False)
+    sagulung = models.IntegerField(default=0)
+    bulang = models.IntegerField(default=0)
+    batu_aji = models.IntegerField(default=0)
+    belakang_padang = models.IntegerField(default=0)
+    sekupang = models.IntegerField(default=0)
+    lubuk_baja = models.IntegerField(default=0)
+    batu_ampar = models.IntegerField(default=0)
+    bengkong = models.IntegerField(default=0)
+    nongsa = models.IntegerField(default=0)
+    batam_kota = models.IntegerField(default=0)
+    galang = models.IntegerField(default=0)
+    sei_beduk = models.IntegerField(default=0)
+
+    def __str__(self):
+        return str(self.tanggal)
