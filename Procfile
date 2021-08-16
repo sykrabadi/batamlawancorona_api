@@ -1,1 +1,1 @@
-web: gunicorn batamlawancorona_api.wsgi
+web: gunicorn batamlawancorona_api.wsgi --log-file -
