@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class DataHarian(models.Model):
-    tanggal = models.DateField(blank=False, null=False)
+    tanggal = models.DateField(blank=False, null=False, unique=True)
     kumulatif = models.IntegerField(default=0)
     sembuh = models.IntegerField(default=0)
     dalam_perawatan = models.IntegerField(default=0)
@@ -12,7 +12,7 @@ class DataHarian(models.Model):
         return str(self.tanggal)
 
 class DataPerKecamatan(models.Model):
-    tanggal = models.DateField(blank=False, null=False)
+    tanggal = models.DateField(blank=False, null=False, unique=True)
     sagulung = models.IntegerField(default=0)
     bulang = models.IntegerField(default=0)
     batu_aji = models.IntegerField(default=0)

@@ -6,7 +6,6 @@ class DataHarianSerializer(serializers.ModelSerializer):
     class Meta:
         model = DataHarian
         fields = [
-            'pk',
             'tanggal',
             'kumulatif',
             'sembuh',
@@ -18,7 +17,6 @@ class DataPerKecamatanSerializer(serializers.ModelSerializer):
     class Meta:
         model = DataPerKecamatan
         fields = [
-            'pk',
             'tanggal',
             'sagulung', 
             'bulang', 
