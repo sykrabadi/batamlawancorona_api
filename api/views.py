@@ -8,21 +8,21 @@ from api import serializers
 class DataHarianList(generics.ListAPIView):
     queryset = DataHarian.objects.all()
     serializer_class = DataHarianSerializer
-    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 class DataHarianDetail(generics.RetrieveAPIView):
     lookup_field = 'tanggal'
     queryset = DataHarian.objects.all()
     serializer_class = DataHarianSerializer
-    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 class DataPerKecamatanList(generics.ListAPIView):
     queryset = DataPerKecamatan.objects.all()
     serializer_class = DataPerKecamatanSerializer
-    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 class DataPerKecamatanDetail(generics.RetrieveAPIView):
     lookup_field = 'tanggal'
     queryset = DataPerKecamatan.objects.all()
     serializer_class = DataPerKecamatanSerializer
-    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
