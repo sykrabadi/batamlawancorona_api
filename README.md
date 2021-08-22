@@ -24,3 +24,6 @@ Example : https://batamlawancoronaapi.herokuapp.com/dataharian/2021-08-18
 ### Get/Retrieve Daily Cases (Kasus Harian) Across All Subdistrict Of Batam Based On Specified Date. Date Format Should Be yyyy-mm-dd
 Example : https://batamlawancoronaapi.herokuapp.com/datakecamatan/2021-08-18
 *https://batamlawancoronaapi.herokuapp.com/datakecamatan/yyyy-mm-dd
+
+## Documentation
+Documentation for this API can be found at http://batamlawancoronaapi.herokuapp.com/docs/
