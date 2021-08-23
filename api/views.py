@@ -31,6 +31,8 @@ class DataPerKecamatanList(generics.ListAPIView):
     queryset = DataPerKecamatan.objects.all()
     serializer_class = DataPerKecamatanSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    filter_backends = [filters.OrderingFilter]
+    ordering_fields = ['tanggal']
 
 class DataPerKecamatanDetail(generics.RetrieveAPIView):
     """
@@ -40,5 +42,3 @@ class DataPerKecamatanDetail(generics.RetrieveAPIView):
     queryset = DataPerKecamatan.objects.all()
     serializer_class = DataPerKecamatanSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    filter_backends = [filters.OrderingFilter]
-    ordering_fields = ['tanggal']
