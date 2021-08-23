@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, filters
 from .serializers import DataHarianSerializer, DataPerKecamatanSerializer
 from .models import DataHarian, DataPerKecamatan
 from api import serializers
@@ -12,6 +12,8 @@ class DataHarianList(generics.ListAPIView):
     queryset = DataHarian.objects.all()
     serializer_class = DataHarianSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    filter_backends = [filters.OrderingFilter]
+    ordering_fields = ['tanggal']
 
 class DataHarianDetail(generics.RetrieveAPIView):
     """
@@ -38,3 +40,5 @@ class DataPerKecamatanDetail(generics.RetrieveAPIView):
     queryset = DataPerKecamatan.objects.all()
     serializer_class = DataPerKecamatanSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    filter_backends = [filters.OrderingFilter]
+    ordering_fields = ['tanggal']

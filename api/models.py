@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import admin
 
 # Create your models here.
 class DataHarian(models.Model):
@@ -7,6 +8,8 @@ class DataHarian(models.Model):
     sembuh = models.IntegerField(default=0)
     dalam_perawatan = models.IntegerField(default=0)
     meninggal = models.IntegerField(default=0)
+
+    @admin.display(ordering='tanggal')
 
     def __str__(self):
         return str(self.tanggal)
@@ -25,6 +28,8 @@ class DataPerKecamatan(models.Model):
     batam_kota = models.IntegerField(default=0)
     galang = models.IntegerField(default=0)
     sei_beduk = models.IntegerField(default=0)
+
+    @admin.display(ordering='tanggal')
 
     def __str__(self):
         return str(self.tanggal)
