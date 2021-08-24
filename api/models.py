@@ -4,10 +4,10 @@ from django.contrib import admin
 # Create your models here.
 class DataHarian(models.Model):
     tanggal = models.DateField(blank=False, null=False, unique=True)
-    kumulatif = models.IntegerField(default=0)
-    sembuh = models.IntegerField(default=0)
-    dalam_perawatan = models.IntegerField(default=0)
-    meninggal = models.IntegerField(default=0)
+    kumulatif = models.IntegerField(blank=True)
+    sembuh = models.IntegerField(blank=True)
+    dalam_perawatan = models.IntegerField(blank=True)
+    meninggal = models.IntegerField(blank=True)
 
     @admin.display(ordering='tanggal')
 
@@ -16,18 +16,18 @@ class DataHarian(models.Model):
 
 class DataPerKecamatan(models.Model):
     tanggal = models.DateField(blank=False, null=False, unique=True)
-    sagulung = models.IntegerField(default=0)
-    bulang = models.IntegerField(default=0)
-    batu_aji = models.IntegerField(default=0)
-    belakang_padang = models.IntegerField(default=0)
-    sekupang = models.IntegerField(default=0)
-    lubuk_baja = models.IntegerField(default=0)
-    batu_ampar = models.IntegerField(default=0)
-    bengkong = models.IntegerField(default=0)
-    nongsa = models.IntegerField(default=0)
-    batam_kota = models.IntegerField(default=0)
-    galang = models.IntegerField(default=0)
-    sei_beduk = models.IntegerField(default=0)
+    sagulung = models.IntegerField(blank=True)
+    bulang = models.IntegerField(blank=True)
+    batu_aji = models.IntegerField(blank=True)
+    belakang_padang = models.IntegerField(blank=True)
+    sekupang = models.IntegerField(blank=True)
+    lubuk_baja = models.IntegerField(blank=True)
+    batu_ampar = models.IntegerField(blank=True)
+    bengkong = models.IntegerField(blank=True)
+    nongsa = models.IntegerField(blank=True)
+    batam_kota = models.IntegerField(blank=True)
+    galang = models.IntegerField(blank=True)
+    sei_beduk = models.IntegerField(blank=True)
 
     @admin.display(ordering='tanggal')
 
