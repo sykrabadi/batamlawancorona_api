@@ -16,6 +16,7 @@ class DataHarianList(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     filter_backends = [filters.OrderingFilter]
     ordering_fields = ['tanggal']
+    ordering = ['-tanggal']
 
 class DataHarianDetail(generics.RetrieveAPIView):
     """
@@ -36,6 +37,7 @@ class DataPerKecamatanList(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     filter_backends = [filters.OrderingFilter]
     ordering_fields = ['tanggal']
+    ordering = ['-tanggal']
 
 class DataPerKecamatanDetail(generics.RetrieveAPIView):
     """
