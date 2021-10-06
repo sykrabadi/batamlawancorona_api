@@ -30,3 +30,6 @@ Documentation for this API can be found at http://batamlawancoronaapi.herokuapp.
 
 ## Contact
 If there any unmatch data between this API and official Batam Lawan Corona site (https://lawancorona.batam.go.id/) please email to muhammadsyukura@gmail.com with 'Batam Lawan Corona API Data Correction' subject, following the unmatch data category.
+
+## Contribute
+The contributing guideline can be found at [CONTRIBUTE.md](https://github.com/sykrabadi/batamlawancorona_api/blob/main/CONTRIBUTING.md) file
