@@ -7,7 +7,9 @@ class DataHarianAdmin(admin.ModelAdmin):
     list_filter = ('tanggal',)
 
 class DataPerKecamatanAdmin(admin.ModelAdmin):
-    list_display = ('tanggal' ,'sagulung', 'bulang', 'batu_aji', 'belakang_padang', 'sekupang', 'lubuk_baja', 'batu_ampar', 'bengkong', 'nongsa', 'batam_kota', 'galang', 'sei_beduk',)
+    list_display = ('tanggal' ,'sagulung', 'bulang', 'batu_aji', 'belakang_padang', 
+    'sekupang', 'lubuk_baja', 'batu_ampar', 'bengkong', 'nongsa', 'batam_kota', 
+    'galang', 'sei_beduk', 'transit')
 
 admin.site.register(DataPerKecamatan, DataPerKecamatanAdmin)
 admin.site.register(DataHarian, DataHarianAdmin)

@@ -28,6 +28,7 @@ class DataPerKecamatan(models.Model):
     batam_kota = models.IntegerField(blank=True)
     galang = models.IntegerField(blank=True)
     sei_beduk = models.IntegerField(blank=True)
+    transit = models.IntegerField(blank=True)
 
     @admin.display(ordering='tanggal')
 

@@ -30,4 +30,5 @@ class DataPerKecamatanSerializer(serializers.ModelSerializer):
             'batam_kota', 
             'galang', 
             'sei_beduk',
+            'transit',
         ]
